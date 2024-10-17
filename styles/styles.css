@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    height: 100vh;
+    align-items: center;
+    /* scroll-snap-type: x mandatory; */
+}
+
+.section {
+    padding: 20px;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.profile-section {
+    flex-direction: column;
+    text-align: center;
+    width: 50vw;
+    height: 100vh;
+    align-items: flex-start;
+    padding-inline: 5vw;
+}
+
+.profile-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-section h1 {
+    font-size: 5rem;
+    font-weight: 100;
+    color: #479EC6;
+}
+
+.profile-section h1 span {
+    font-size: 5rem;
+    color: #479EC6;
+    font-weight: 600;
+}
+
+.profile-section p {
+    color: #222222;
+    font-size: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 80%;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    margin-top: 14vh;
+}
+
+.social-icons img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+/* case-studies */
+.case-studies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: auto;
+    position: relative;
+    overflow-x: hidden;
+    padding-left: 12vw;
+}
+
+.case-study {
+    width: 22vw;
+    height: auto;
+}
+
+.case-study img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* resume-section  */
+.resume-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-section p {
+    color: #222;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.75rem;
+    width: 50%;
+    text-align: left;
+}
+
+.resume-button {
+    padding: 10px 20px;
+    border: 1px solid #222222;
+    border-radius: 100px;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .scroll-container {
+        display: block;
+        overflow-x: hidden;
+    }
+
+    .section {
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-section p{
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .profile-section .social-icons{
+        width: 100%;
+    }
+    
+    .profile-section .social-icons a{
+        margin-top: 6vh;
+    }
+
+    .case-studies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .case-study {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .resume-section p{
+        width: 100%;
+        text-align: center;
+    }
+}
